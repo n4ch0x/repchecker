@@ -395,25 +395,24 @@ class ReputationCheckerView:
         date_text = f"Last report on {date.strftime('%d %B %Y')}"
         self.update_references["date_virus_value"].configure(text=date_text)
 
-        def reset_reputation_data(self):
-            self.update_references["ip_address_value"].configure(text="")
-            self.update_references["fqdn_value"].configure(text="")
-            self.update_references["network_value"].configure(text="")
-            self.update_references["isp_value"].configure(text="")
-            self.update_references["country_value"].configure(text="")
-            self.update_references["continent_value"].configure(text="")
-            self.update_references["registry_value"].configure(text="")
+    def reset_reputation_data(self):
+        """Resets all the values of previous collected reputation data to empty values."""
+        self.update_references["ip_address_value"].configure(text="")
+        self.update_references["fqdn_value"].configure(text="")
+        self.update_references["network_value"].configure(text="")
+        self.update_references["isp_value"].configure(text="")
+        self.update_references["country_value"].configure(text="")
+        self.update_references["continent_value"].configure(text="")
+        self.update_references["registry_value"].configure(text="")
 
-            self.update_references["abuse_value"].configure(bg="SystemButtonFace")
-            self.update_references["abuse_value"].configure(text="")
-            self.update_references["abuse_users_value"].configure(text="")
-            self.update_references["abuse_date_value"].configure(text="")
-
-            self.update_references["malicious_value"].configure(bg="SystemButtonFace")
-            self.update_references["malicious_value"].configure(text="")
-            self.update_references["suspicious_value"].configure(bg="SystemButtonFace")
-            self.update_references["suspicious_value"].configure(text="")
-            self.update_references["harmless_value"].configure(bg="SystemButtonFace")
-            self.update_references["harmless_value"].configure(text="")
-            self.update_references["date_virus_value"].configure(text="")
-
+        self.update_references["abuse_value"].configure(bg="SystemButtonFace")
+        self.update_references["abuse_value"].configure(text="")
+        self.update_references["abuse_users_value"].configure(text="")
+        self.update_references["abuse_date_value"].configure(text="")
+        self.update_references["malicious_value"].configure(bg="SystemButtonFace")
+        self.update_references["malicious_value"].configure(text="")
+        self.update_references["suspicious_value"].configure(bg="SystemButtonFace")
+        self.update_references["suspicious_value"].configure(text="")
+        self.update_references["harmless_value"].configure(bg="SystemButtonFace")
+        self.update_references["harmless_value"].configure(text="")
+        self.update_references["date_virus_value"].configure(text="")
